@@ -56,12 +56,12 @@ The dedicated contact page at `/contact` posts to `/api/contact`.
 Set these environment variables before using email sending:
 
 ```bash
-SMTP_HOST=smtp.yourprovider.com
-SMTP_PORT=587
-SMTP_USER=your_smtp_user
-SMTP_PASS=your_smtp_password
+RESEND_API_KEY=re_xxxxxxxxx
+CONTACT_FROM_EMAIL="Portfolio Contact <onboarding@resend.dev>"
 CONTACT_TO_EMAIL=ravinduuswaththa@gmail.com
 ```
+
+If you use a custom sender email in `CONTACT_FROM_EMAIL`, verify your domain in Resend first.
 
 ## Customization
 

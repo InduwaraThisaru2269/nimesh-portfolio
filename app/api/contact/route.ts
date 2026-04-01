@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 type ContactRequest = {
   name?: string;
@@ -9,6 +9,15 @@ type ContactRequest = {
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
 }
 
 export async function POST(request: Request) {
@@ -32,41 +41,40 @@ export async function POST(request: Request) {
       );
     }
 
-    const smtpHost = process.env.SMTP_HOST;
-    const smtpPort = Number(process.env.SMTP_PORT ?? "587");
-    const smtpUser = process.env.SMTP_USER;
-    const smtpPass = process.env.SMTP_PASS;
+    const resendApiKey = process.env.RESEND_API_KEY;
     const recipient =
       process.env.CONTACT_TO_EMAIL ?? "ravinduuswaththa@gmail.com";
+    const fromEmail =
+      process.env.CONTACT_FROM_EMAIL ??
+      "Portfolio Contact <onboarding@resend.dev>";
 
-    if (!smtpHost || !smtpUser || !smtpPass) {
+    if (!resendApiKey) {
       return NextResponse.json(
         {
-          error:
-            "Email service is not configured. Set SMTP_HOST, SMTP_PORT, SMTP_USER, and SMTP_PASS.",
+          error: "Email service is not configured. Set RESEND_API_KEY.",
         },
         { status: 500 },
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      host: smtpHost,
-      port: smtpPort,
-      secure: smtpPort === 465,
-      auth: {
-        user: smtpUser,
-        pass: smtpPass,
-      },
-    });
+    const resend = new Resend(resendApiKey);
 
-    await transporter.sendMail({
-      from: `Portfolio Contact <${smtpUser}>`,
-      to: recipient,
+    const { error } = await resend.emails.send({
+      from: fromEmail,
+      to: [recipient],
       replyTo: email,
       subject: `New Contact Request from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-      html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message.replaceAll("\n", "<br />")}</p>`,
+      html: `<p><strong>Name:</strong> ${escapeHtml(name)}</p><p><strong>Email:</strong> ${escapeHtml(email)}</p><p><strong>Message:</strong></p><p>${escapeHtml(message).replaceAll("\n", "<br />")}</p>`,
     });
+
+    if (error) {
+        console.error("Error sending contact email:", error);
+      return NextResponse.json(
+        { error: "Unable to send your message right now." },
+        { status: 502 },
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch {
