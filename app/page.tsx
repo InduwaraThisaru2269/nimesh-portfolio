@@ -1,27 +1,19 @@
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import BentoGrid from "./components/BentoGrid";
-import DataIntelligence from "./components/DataIntelligence";
-import CaseStudies from "./components/CaseStudies";
-import About from "./components/About";
 import Roadmap from "./components/Roadmap";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import About from "./components/About";
+import Testimonials from "./components/Testimonials";
+import ContactCta from "./components/ContactCta";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <BentoGrid />
-        <DataIntelligence />
-        <CaseStudies />
-        <About />
-        <Roadmap />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <main>
+      <Hero />
+      <BentoGrid />
+      <Roadmap />
+      <About />
+      <Testimonials />
+      <ContactCta />
+    </main>
   );
 }

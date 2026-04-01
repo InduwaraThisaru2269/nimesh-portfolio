@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section className="py-20 bg-gradient-to-br from-white to-indigo-50 dark:from-gray-900 dark:to-indigo-900/20">
+    <section
+      id="contact"
+      className="py-20 bg-linear-to-br from-white to-indigo-50 dark:from-gray-900 dark:to-indigo-900/20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -11,7 +14,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-indigo-900 dark:from-white dark:to-indigo-100 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl font-bold bg-linear-to-r from-gray-900 to-indigo-900 dark:from-white dark:to-indigo-100 bg-clip-text text-transparent mb-4">
             Let&apos;s Architect Your Digital Roadmap
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -28,14 +31,14 @@ export default function Contact() {
             className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-white/20 dark:border-gray-700/20"
           >
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-3">
+              <div className="w-10 h-10 bg-linear-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-3">
                 <span className="text-white font-bold">✓</span>
               </div>
               Why Partner With Me?
             </h3>
             <ul className="space-y-4 text-gray-600 dark:text-gray-300 mb-8">
               <li className="flex items-start">
-                <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mr-3 mt-0.5 shrink-0">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                 </div>
                 <span>
@@ -44,7 +47,7 @@ export default function Contact() {
                 </span>
               </li>
               <li className="flex items-start">
-                <div className="w-6 h-6 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                <div className="w-6 h-6 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mr-3 mt-0.5 shrink-0">
                   <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                 </div>
                 <span>
@@ -53,7 +56,7 @@ export default function Contact() {
                 </span>
               </li>
               <li className="flex items-start">
-                <div className="w-6 h-6 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                <div className="w-6 h-6 bg-purple-100 dark:bg-purple-900/50 rounded-full flex items-center justify-center mr-3 mt-0.5 shrink-0">
                   <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
                 </div>
                 <span>
@@ -61,7 +64,7 @@ export default function Contact() {
                 </span>
               </li>
               <li className="flex items-start">
-                <div className="w-6 h-6 bg-orange-100 dark:bg-orange-900/50 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                <div className="w-6 h-6 bg-orange-100 dark:bg-orange-900/50 rounded-full flex items-center justify-center mr-3 mt-0.5 shrink-0">
                   <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                 </div>
                 <span>
@@ -69,13 +72,14 @@ export default function Contact() {
                 </span>
               </li>
             </ul>
-            <motion.button
+            <motion.a
+              href="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="inline-flex w-full items-center justify-center bg-linear-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Book Discovery Call
-            </motion.button>
+              Open Dedicated Contact Page
+            </motion.a>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -84,7 +88,7 @@ export default function Contact() {
             className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-white/20 dark:border-gray-700/20"
           >
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-3">
+              <div className="w-10 h-10 bg-linear-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-3">
                 <span className="text-white font-bold">📅</span>
               </div>
               Schedule Consultation
@@ -96,7 +100,7 @@ export default function Contact() {
                   src="https://calendly.com/induwarathisaru2002/30min?embed_domain=localhost&embed_type=Inline"
                   width="100%"
                   height="500"
-                  frameBorder="0"
+                  style={{ border: 0 }}
                   className="w-full"
                 ></iframe>
               </div>
@@ -107,12 +111,10 @@ export default function Contact() {
             </p>
             <div className="text-center mt-4">
               <a
-                href="https://calendly.com/induwarathisaru2002/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Open Calendly in new tab
+                Open Full Contact Experience
               </a>
             </div>
           </motion.div>

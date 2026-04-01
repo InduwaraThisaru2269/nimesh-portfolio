@@ -49,6 +49,20 @@ npm start
 
 Or deploy directly to Vercel from GitHub.
 
+## Contact Form Email Setup
+
+The dedicated contact page at `/contact` posts to `/api/contact`.
+
+Set these environment variables before using email sending:
+
+```bash
+SMTP_HOST=smtp.yourprovider.com
+SMTP_PORT=587
+SMTP_USER=your_smtp_user
+SMTP_PASS=your_smtp_password
+CONTACT_TO_EMAIL=ravinduuswaththa@gmail.com
+```
+
 ## Customization
 
 - Replace placeholder images in `public/` with actual headshot and logos

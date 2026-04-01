@@ -1,122 +1,130 @@
 "use client";
+
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   return (
     <section
-      id="experience"
-      className="py-20 bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-blue-900/20"
+      id="about"
+      className="py-24"
+      style={{
+        backgroundColor: "#f8fafc",
+        backgroundImage:
+          "radial-gradient(circle, rgba(148,163,184,0.2) 1px, transparent 1px)",
+        backgroundSize: "24px 24px",
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div id="experience" className="relative -top-24" />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(20rem,0.85fr)] lg:items-start">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -36 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            viewport={{ once: true, amount: 0.2 }}
           >
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-gray-900 to-blue-900 dark:from-white dark:to-blue-100 bg-clip-text text-transparent mb-6">
-              Intersecting Business Strategy with Enterprise Technology
+            <p className="text-[0.72rem] font-bold uppercase tracking-[0.32em] text-cyan-600">
+              About Me
+            </p>
+            <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-[#002D62] md:text-6xl">
+              Part Strategist, Part Data Architect, Full-Time Problem Solver.
             </h2>
-            <div className="space-y-6">
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                I am a Functional Consultant specializing in the architecture
-                and deployment of{" "}
-                <span className="font-semibold text-blue-600 dark:text-blue-400">
-                  Microsoft Dynamics 365 Business Central
-                </span>{" "}
-                ecosystems. My approach goes beyond software implementation; I
-                focus on{" "}
-                <span className="font-semibold text-indigo-600 dark:text-indigo-400">
-                  Business Process Re-engineering (BPR)
-                </span>{" "}
-                to ensure technology serves the bottom line.
+
+            <div className="mt-8 space-y-7">
+              <p className="text-lg leading-8 text-slate-600">
+                I live at the intersection of business logic and clean code.
+                While some people see a messy spreadsheet and see a headache, I
+                see the blueprint for a high-performing enterprise.
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                With a deep-rooted expertise in the Microsoft stack—including{" "}
-                <span className="font-semibold text-blue-600 dark:text-blue-400">
-                  Power BI, Power Apps, and Microsoft Fabric
-                </span>
-                —I transform fragmented data into actionable corporate
-                intelligence. As the enterprise landscape evolves, I am
-                currently expanding my architectural footprint into{" "}
-                <span className="font-semibold text-green-600 dark:text-green-400">
-                  SAP S/4HANA, Oracle Cloud, and IFS
-                </span>
-                , providing clients with platform-agnostic insights that drive
-                global scalability and operational excellence.
+
+              <p className="text-lg leading-8 text-slate-600">
+                My mission is simple: To make ERP systems feel less like
+                &ldquo;software&rdquo; and more like a competitive advantage.
+                With a deep-rooted obsession for Microsoft Dynamics 365 Business
+                Central, I&apos;ve spent years helping companies stop fighting
+                their data and start using it. Whether it&apos;s building
+                automated workflows in Power Automate or designing
+                &ldquo;CFO-friendly&rdquo; dashboards in Power BI, I&apos;m all
+                about eliminating the manual so you can focus on the meaningful.
               </p>
+
+              <div className="rounded-[30px] border border-slate-200 bg-white/90 p-6 shadow-[0_18px_40px_rgba(148,163,184,0.14)]">
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.28em] text-slate-500">
+                  The Evolution
+                </p>
+                <p className="mt-4 text-lg leading-8 text-slate-600">
+                  I&apos;m a big believer that a great consultant never stops
+                  being a student. That&apos;s why, when I&apos;m not deep in
+                  the Microsoft stack, you&apos;ll find me architecting my way
+                  into the worlds of SAP, Oracle, and IFS. The best solutions
+                  aren&apos;t found in a single box, they&apos;re found in the
+                  right strategy.
+                </p>
+              </div>
+
+              <div className="rounded-[30px] border border-[#d7e5fb] bg-[#f5f9ff] p-6 shadow-[0_18px_40px_rgba(11,42,93,0.08)]">
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.28em] text-[#3a6fba]">
+                  Outside the Sandbox
+                </p>
+                <p className="mt-4 text-lg leading-8 text-slate-600">
+                  When the laptop closes, I&apos;m usually chasing the perfect
+                  espresso shot or trying to explain to my family what an ERP
+                  actually is. If you&apos;re looking for a partner who takes
+                  your business seriously, but doesn&apos;t mind a well-timed
+                  joke during a migration meeting, let&apos;s talk.
+                </p>
+              </div>
             </div>
           </motion.div>
+
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 36 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-white/20 dark:border-gray-700/20"
+            transition={{ duration: 0.6, delay: 0.12 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="space-y-6"
           >
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-sm">✓</span>
+            <div className="overflow-hidden rounded-[34px] border border-slate-200 bg-white p-4 shadow-[0_20px_50px_rgba(148,163,184,0.16)]">
+              <div className="relative aspect-4/5 overflow-hidden rounded-[28px] bg-slate-100">
+                <Image
+                  src="/Me.jpeg"
+                  alt="Ravindu Nimesh portrait"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 30rem, 100vw"
+                />
               </div>
-              Skills & Expertise
-            </h3>
-            <ul className="space-y-4 text-gray-600 dark:text-gray-300">
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <div>
-                  <strong className="text-gray-900 dark:text-white">
-                    Primary ERP:
-                  </strong>{" "}
-                  <span className="text-blue-600 dark:text-blue-400">
-                    Dynamics 365 Business Central (Certified)
+            </div>
+
+            <div className="rounded-[30px] border border-slate-200 bg-white/95 p-6 shadow-[0_18px_40px_rgba(148,163,184,0.12)]">
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.28em] text-cyan-600">
+                Core Focus
+              </p>
+              <ul className="mt-5 space-y-4 text-slate-600">
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-500" />
+                  <span>
+                    Microsoft Dynamics 365 Business Central architecture and
+                    transformation delivery.
                   </span>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <div>
-                  <strong className="text-gray-900 dark:text-white">
-                    Data Stack:
-                  </strong>{" "}
-                  <span className="text-green-600 dark:text-green-400">
-                    Power BI, Power Automate, Microsoft Fabric, Azure SQL
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-500" />
+                  <span>
+                    Power BI and Power Automate systems that reduce manual work
+                    and sharpen decision-making.
                   </span>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <div>
-                  <strong className="text-gray-900 dark:text-white">
-                    Expansion Areas:
-                  </strong>{" "}
-                  <span className="text-purple-600 dark:text-purple-400">
-                    SAP (FICO/MM), Oracle NetSuite, IFS Cloud
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-indigo-500" />
+                  <span>
+                    Platform-aware strategic thinking across Microsoft, SAP,
+                    Oracle, and IFS ecosystems.
                   </span>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <div>
-                  <strong className="text-gray-900 dark:text-white">
-                    Methodologies:
-                  </strong>{" "}
-                  <span className="text-orange-600 dark:text-orange-400">
-                    Agile, Waterfall, Sure Step
-                  </span>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                <div>
-                  <strong className="text-gray-900 dark:text-white">
-                    Languages:
-                  </strong>{" "}
-                  <span className="text-red-600 dark:text-red-400">
-                    English, Sinhala
-                  </span>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </motion.div>
         </div>
       </div>
