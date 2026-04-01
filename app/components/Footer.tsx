@@ -96,7 +96,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Ravindu Nimesh Resume.pdf"
+                  download
+                  className="hover:text-white transition-colors"
+                >
                   Resume (PDF)
                 </a>
               </li>
@@ -105,14 +109,24 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-red-300">Connect</h4>
             <ul className="space-y-2 text-gray-300">
-              <li>Ravindu Nimesh@example.com</li>
+              <li>ravinduuswaththa@gmail.com</li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="https://www.linkedin.com/in/nimesh-uswaththa-74a96a300/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
                   LinkedIn Profile
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="https://calendly.com/your-calendly-username/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
                   Calendly Booking
                 </a>
               </li>

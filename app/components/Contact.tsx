@@ -89,20 +89,32 @@ export default function Contact() {
               </div>
               Schedule Consultation
             </h3>
-            <div className="aspect-video bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl flex items-center justify-center border border-gray-200 dark:border-gray-600 mb-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl">📅</span>
-                </div>
-                <span className="text-gray-600 dark:text-gray-300 font-medium">
-                  Calendly Integration
-                </span>
+            <div className="mb-6">
+              <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-600 shadow-lg">
+                <iframe
+                  title="Calendly Scheduling"
+                  src="https://calendly.com/induwarathisaru2002/30min?embed_domain=localhost&embed_type=Inline"
+                  width="100%"
+                  height="500"
+                  frameBorder="0"
+                  className="w-full"
+                ></iframe>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 text-center">
-              Select a convenient time for our strategy consultation. I&apos;m
-              here to help transform your business processes.
+              If you prefer, use the button below to open the booking page in a
+              new tab.
             </p>
+            <div className="text-center mt-4">
+              <a
+                href="https://calendly.com/induwarathisaru2002/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Open Calendly in new tab
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>

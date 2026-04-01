@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -69,10 +70,15 @@ export default function Hero() {
                   }}
                   className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/20 to-indigo-400/20 blur-xl"
                 ></motion.div>
-                <div className="relative w-80 h-80 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center shadow-2xl border border-white/20 dark:border-gray-600/20">
-                  <span className="text-gray-500 dark:text-gray-400 text-lg font-medium">
-                    Professional Headshot
-                  </span>
+                <div className="relative w-80 h-80 rounded-full shadow-2xl border border-white/20 dark:border-gray-600/20 overflow-hidden">
+                  <Image
+                    src="/Headshotv2.jpeg"
+                    alt="Nimesh headshot"
+                    fill
+                    className="object-cover object-top"
+                    placeholder="blur"
+                    blurDataURL="/Headshotv2.jpeg"
+                  />
                 </div>
               </div>
             </motion.div>
