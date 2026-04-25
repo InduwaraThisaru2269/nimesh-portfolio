@@ -75,7 +75,6 @@ export default function ContactPage() {
           >
             Back to Home
           </Link>
-          
         </div>
 
         <motion.div
@@ -89,8 +88,8 @@ export default function ContactPage() {
             Contact & Discovery
           </h1>
           <p className="mt-4 text-base leading-8 text-slate-600 md:text-lg">
-            Book a strategy session or send a direct message with
-            your project context.
+            Book a strategy session or send a direct message with your project
+            context.
           </p>
         </motion.div>
 
@@ -220,20 +219,20 @@ export default function ContactPage() {
                   Email:{" "}
                   <a
                     className="text-[#0b2a5d] underline"
-                    href="mailto:ravinduuswaththa@gmail.com"
+                    href="mailto:nimeshuswaththa@gmail.com"
                   >
-                    ravinduuswaththa@gmail.com
+                    nimeshuswaththa@gmail.com
                   </a>
                 </li>
                 <li>
                   LinkedIn:{" "}
                   <a
                     className="text-[#0b2a5d] underline"
-                    href="https://www.linkedin.com/in/nimesh-uswaththa-74a96a300/"
+                    href="https://www.linkedin.com/in/ravindu-uswaththa-74a96a300/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    nimesh-uswaththa-74a96a300
+                    Nimesh Uswaththa
                   </a>
                 </li>
                 <li>

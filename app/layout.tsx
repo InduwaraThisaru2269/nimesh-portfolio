@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ravindu Nimesh - ERP Functional Consultant",
+  title: "Nimesh Uswaththa - ERP Functional Consultant",
   description: "Architecting Scalable ERP Solutions for Global Enterprises",
 };
 

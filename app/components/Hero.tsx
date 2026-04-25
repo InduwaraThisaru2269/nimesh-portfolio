@@ -132,12 +132,12 @@ export default function Hero() {
                 ></motion.div>
                 <div className="relative w-80 h-80 rounded-full shadow-2xl border border-white/20 dark:border-gray-600/20 overflow-hidden">
                   <Image
-                    src="/Headshotv2.jpeg"
+                    src="/Headshotv3.jpeg"
                     alt="Nimesh headshot"
                     fill
                     className="object-cover object-top"
                     placeholder="blur"
-                    blurDataURL="/Headshotv2.jpeg"
+                    blurDataURL="/Headshotv3.jpeg"
                   />
                 </div>
               </div>

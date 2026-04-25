@@ -43,7 +43,7 @@ export async function POST(request: Request) {
 
     const resendApiKey = process.env.RESEND_API_KEY;
     const recipient =
-      process.env.CONTACT_TO_EMAIL ?? "ravinduuswaththa@gmail.com";
+      process.env.CONTACT_TO_EMAIL ?? "nimeshuswaththa@gmail.com";
     const fromEmail =
       process.env.CONTACT_FROM_EMAIL ??
       "Portfolio Contact <onboarding@resend.dev>";
@@ -69,7 +69,7 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-        console.error("Error sending contact email:", error);
+      console.error("Error sending contact email:", error);
       return NextResponse.json(
         { error: "Unable to send your message right now." },
         { status: 502 },

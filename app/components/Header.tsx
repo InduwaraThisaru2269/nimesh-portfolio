@@ -17,7 +17,7 @@ export default function Header() {
             href="/"
             className="text-[20px] font-black tracking-[3px] text-[#0b2a5d]"
           >
-            Ravindu Nimesh
+            Nimesh Uswaththa
           </Link>
 
           <nav className="hidden items-center gap-8 text-sm font-medium text-[#2f4f85] lg:flex">
@@ -30,7 +30,7 @@ export default function Header() {
             <Link href="/case-studies" className="hover:text-[#0b2a5d]">
               Case Studies
             </Link>
-            <a href="#about" className="hover:text-[#0b2a5d]">
+            <a href="/#about" className="hover:text-[#0b2a5d]">
               About
             </a>
           </nav>

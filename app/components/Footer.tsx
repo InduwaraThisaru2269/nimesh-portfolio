@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr]">
           <div>
             <h3 className="text-xl font-extrabold uppercase tracking-[0.03em] text-white">
-              Ravindu Nimesh
+              Nimesh Uswaththa
             </h3>
             <div className="mt-8 flex items-center gap-5 text-[#d7e4ff]">
               <Link
@@ -74,7 +74,7 @@ export default function Footer() {
       <div className="border-t border-white/8 bg-[#29428f]">
         <div className="mx-auto max-w-7xl px-6 py-8 sm:px-8 lg:px-12">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#7f95d1]">
-            © 2024 Ravindu Nimesh. All Rights Reserved.
+            © 2024 Nimesh Uswaththa. All Rights Reserved.
           </p>
         </div>
       </div>

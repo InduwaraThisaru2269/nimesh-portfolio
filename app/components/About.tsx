@@ -88,8 +88,8 @@ export default function About() {
             <div className="overflow-hidden rounded-[34px] border border-slate-200 bg-white p-4 shadow-[0_20px_50px_rgba(148,163,184,0.16)]">
               <div className="relative aspect-4/5 overflow-hidden rounded-[28px] bg-slate-100">
                 <Image
-                  src="/Me.jpeg"
-                  alt="Ravindu Nimesh portrait"
+                  src="/Mev2.jpeg"
+                  alt="Nimesh Uswaththa portrait"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 30rem, 100vw"
