@@ -38,7 +38,7 @@ export default function Hero() {
             >
               <div className="relative mb-6">
                 <h1 className="text-4xl md:text-6xl font-extrabold text-[#002D62] leading-tight">
-                  Architecting Scalable Enterprise Logic through
+                  I Architect Scalable Enterprise Logic through
                 </h1>
                 <div className="mt-3 space-y-4">
                   {[
